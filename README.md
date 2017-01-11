@@ -1,4 +1,4 @@
-# python-scrapy-demo
+# python抓取文章的一个例子
 ## 使用python scrapy 抓取虎嗅网（ https://www.huxiu.com/ ）资讯模块
 ### 1.文章内容采用mongodb进行存储或修改配置存储到json文件。
 ### 2.采用脚本的方式启动 只要运行run.py文件即可。
