@@ -16,14 +16,12 @@ from subprocess import Popen, PIPE, check_call
 
 from w3lib.form import encode_multipart
 import setuptools # not used in code but needed in runtime, don't remove!
-
 from scrapy.utils.project import inside_project
 from scrapy.utils.http import basic_auth_header
 from scrapy.utils.python import retry_on_eintr
 from scrapy.utils.conf import get_config, closest_scrapy_cfg
-
 from devops import util
-import settings
+
 
 
 _SETUP_PY_TEMPLATE = \
@@ -59,7 +57,7 @@ def parse_opts():
         help="only build the egg, don't deploy it")
     return parser.parse_args()
 
-def deploy(server_url=settings.scrayd_url):
+def deploy():
     opts, args = parse_opts()
     if not inside_project():
         _log("Error: no Scrapy project found in this location")
@@ -85,7 +83,8 @@ def deploy(server_url=settings.scrayd_url):
 
     tmpdir = None
 
-    if opts.build_egg: # build egg only
+    # build egg only
+    if opts.build_egg:
         egg, tmpdir = _build_egg()
         _log("Writing egg to %s" % opts.build_egg)
         shutil.copyfile(egg, opts.build_egg)

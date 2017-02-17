@@ -1,0 +1,2 @@
+构建镜像 docker build -t lvhe/spider:2.0 .
+运行容器 docker run -d -p 6801:6800 --name spider_2 lvhe/spider:1.0
