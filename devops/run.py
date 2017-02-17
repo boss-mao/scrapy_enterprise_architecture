@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
-import scrapyd_cencel
+import devops.docker.scrapyd_cencel
 from devops import scrapyd_deploy
 from devops import scrapyd_scheduling
 
