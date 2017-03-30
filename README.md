@@ -12,3 +12,4 @@
 - 自动化部署爬虫脚本，爬虫部署采用scrapyd框架
 - 支持部署到docker中
 - 使用中间件自动处理随机user-agent
+- 重写make_request_from_data，实现基于scrapy_redis的Feeding模式，可自定义发送请求
