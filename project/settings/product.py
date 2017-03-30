@@ -57,9 +57,9 @@ DOWNLOAD_DELAY = 3
 DOWNLOAD_TIMEOUT = 300
 
 # redis
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
-SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-SCHEDULER_PERSIST = True
+# DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# SCHEDULER_PERSIST = True
 REDIS_HOST = '192.168.1.61'
 REDIS_PORT = 6379
 

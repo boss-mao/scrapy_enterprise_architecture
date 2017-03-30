@@ -46,14 +46,21 @@ DOWNLOADER_MIDDLEWARES = {
     'scrapy.downloadermiddlewares.stats.DownloaderStats': 850,
     'scrapy.downloadermiddlewares.httpcache.HttpCacheMiddleware': 900,
     # Downloader side
-    'project.middlewares.rotate_user_agent_middleware.RotateUserAgentMiddleware': 950
-    # 'project.middlewares.proxy_middleware.ProxyMiddleware': 960
+    'project.middlewares.rotate_user_agent_middleware.RotateUserAgentMiddleware': 950,
+    'project.middlewares.proxy_middleware.ProxyMiddleware': 960
 }
 
 # 下载速度控制
 RANDOMIZE_DOWNLOAD_DELAY = True
 DOWNLOAD_DELAY = 2
 DOWNLOAD_TIMEOUT = 500
+
+# redis
+# DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+# SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+# SCHEDULER_PERSIST = True
+REDIS_HOST = '192.168.1.61'
+REDIS_PORT = 6379
 
 DUPEFILTER_DEBUG = True
 MONGO_URI = 'mongodb://192.168.1.6:27017'

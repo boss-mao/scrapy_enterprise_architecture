@@ -16,6 +16,7 @@ RUN pip install pymongo
 RUN pip install scrapy-redis
 
 RUN mkdir /usr/local/spider
+RUN mkdir -p /data/spider/
 RUN apt-get install -y supervisor
 RUN echo_supervisord_conf > /etc/supervisor/conf.d/supervisord.conf
 RUN sed -i '$a [supervisord]\nnodaemon=true\n[program:scrapyd]\ncommand=scrapyd\ndirectory=/usr/local/spider' /etc/supervisor/conf.d/supervisord.conf
