@@ -1,5 +1,5 @@
 FROM daocloud.io/ubuntu
-MAINTAINER zhengwen "zhengwen@51lsh.com"
+MAINTAINER zhengwen "mail.zhengwen@gmail.com"
 RUN sed -i 's/http:\/\/archive.ubuntu.com\/ubuntu\//http:\/\/mirrors.163.com\/ubuntu\//g' /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y python2.7 python-dev python-distribute python-pip ipython
